@@ -13,7 +13,7 @@ module.exports = {
     },
     extend: {
       colors: {
-        red: "hsl(0, 87 %, 67 %)",
+        red: "hsl(0, 87%, 67%)",
         cyan: "hsl(180, 66%, 49%)",
         darkViolet: "hsl(257, 27%, 26%)",
         gray: "hsl(0, 0%, 75%)",
@@ -22,9 +22,12 @@ module.exports = {
         veryDarkViolet: "hsl(260, 8%, 14%)",
       },
       fontFamily: {
-        poppins: ["Poppins", "sans-serif"],
+        sans: ["Poppins", "sans-serif"],
       },
     },
   },
   plugins: [],
 };
+
+
+
