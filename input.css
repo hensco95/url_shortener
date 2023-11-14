@@ -32,3 +32,29 @@
   transform: translateY(14px);
 }
 
+.error {
+  color: green;
+}
+
+.error #input-value::placeholder {
+  color: hsl(0, 87%, 67%);
+}
+
+.error #input-value {
+  border-color: hsl(0, 87%, 67%);
+}
+
+#form {
+  background: url("../images/bg-shorten-desktop.svg");
+  background-color: hsl(257, 27%, 26%);
+}
+
+@media screen and (max-width: 500px) {
+  #form {
+    background: url("../images/bg-shorten-mobile.svg");
+    background-color: hsl(257, 27%, 26%);
+    background-repeat: no-repeat;
+    background-size: contain, cover;
+    background-position:right 0% bottom 0%;
+  }
+}
