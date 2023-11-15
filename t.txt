@@ -1,0 +1,13 @@
+<div class=" relative rounded-lg flex flex-col items-center p-6 space-y-3 max-w-6xl container mx-auto">
+        <div class="relative flex items-center -mt-16 mb-5 justify-center bg-darkViolet rounded-full w-20 h-20">
+          <img src="/images/icon-brand-recognition.svg" alt="">
+        </div>
+        <h3 class="text-veryDarkViolet font-semibold text-xl">
+          Brand Recognition
+        </h3>
+        <p class="text-grayishViolet text-sm text-center tracking-wide leading-5">
+          Boost your brand
+          recognition with each click. Generic links don’t mean a thing. Branded links
+          help instil confidence in your content.
+        </p>
+      </div>
