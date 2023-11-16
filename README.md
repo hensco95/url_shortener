@@ -39,8 +39,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://www.frontendmentor.io/solutions/responsive-url-shortener-using-tailwind-css-Zrss3v37UU)
-- Live Site URL: [Add live site URL here](https://urlssmall.netlify.app/)
+- Solution URL: [front end mentor soluton](https://www.frontendmentor.io/solutions/responsive-url-shortener-using-tailwind-css-Zrss3v37UU)
+- Live Site URL: [live link](https://urlssmall.netlify.app/)
 
 ## My process
 
@@ -65,15 +65,15 @@ Build more projects using tailwind css.
 
 ### Useful resources
 
-- [Example resource 1](https://tailwindcss.com/) - This docs helped me when I got stuck on how to implement certain styles. I really liked the documentation and will use it going forward.
-- [Example resource 2](https://www.udemy.com/course/tailwind-from-scratch/) - This is an amazing course by Brad Traversy where he teaches tailwind in an hands on way.
+- [Tailwindcss docs](https://tailwindcss.com/) - This docs helped me when I got stuck on how to implement certain styles. I really liked the documentation and will use it going forward.
+- [Brad Traversy's udemy course](https://www.udemy.com/course/tailwind-from-scratch/) - This is an amazing course by Brad Traversy where he teaches tailwind in an hands on way.
 
 
 ## Author
 
-- Website - [Add your name here](https://linktr.ee/hensco95)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/hensco95)
-- Twitter - [@yourusername](https://twitter.com/ekiye_s)
+- Website - [Henry Seigbein](https://linktr.ee/hensco95)
+- Frontend Mentor - [@hensco95](https://www.frontendmentor.io/profile/hensco95)
+- Twitter - [@hensco95](https://twitter.com/ekiye_s)
 
 
 
