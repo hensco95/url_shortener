@@ -23,6 +23,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <title>Frontend Mentor | Shortly URL shortening API Challenge</title>
   </head>
   <body class="bg-white transition ease-in duration-200">
@@ -64,7 +65,19 @@
           </div>
         </div>
 
+        <div id="menu" class="bg-darkViolet hidden flex-col items-center mt-8 rounded-lg px-6 py-12 space-y-10 md:hidden">
+          <a href="#" class="text-white hover:text-veryDarkViolet duration-200 text-2xl">Features</a>
+          <a href="#" class="text-white hover:text-veryDarkViolet duration-200 text-2xl">Pricing</a>
+          <a href="#" class="text-white  hover:text-veryDarkViolet duration-200 text-2xl">Resources</a>
+
+          <a href="#" class="h-[0.05rem] bg-grayish w-full"></a>
         
+          <a href="#" class="text-white hover:text-veryDarkViolet duration-200 text-2xl">Login</a>
+
+          <button class="bg-cyan hover:opacity-70 duration-200 transition-all px-6 py-4 rounded-full text-2xl text-white w-full font-bold">
+            Sign Up
+          </button>
+        </div>
       </div>
     </section>
 
@@ -103,21 +116,20 @@
 
     <!-- shorten section -->
     <section id="shorten" class="relative bg-gray-100">
-      <div class=" max-w-6xl mx-auto px-6 py-6 items-center space-y-6">
+      <div class="max-w-6xl mx-auto px-6 py-6 items-center space-y-6">
         <form id="link-form" class="relative -mt-24 flex flex-col p-6 bg-darkViolet rounded-lg w-full space-y-4 md:flex-row md:space-x-3 md:space-y-0 md:-mt-16">
-          <input type="url" id="input_id" class="flex-1 p-3 rounded-lg placeholder-grayish focus:outline-none border-2" placeholder="Shorten a link here..." >
+          <input type="text" id="input_id" class="flex-1 p-3 rounded-lg placeholder-grayish focus:outline-none border-2" placeholder="Shorten a link here..." >
           <button class="bg-cyan font-bold hover:opacity-70 duration-200 transition-all px-6 py-3 rounded-md text-base text-white w-full md:w-1/4" id="shorten">
             Shorten It!
           </button>
 
           <!-- error message -->
           <div id="error-msg" class="text-red italic absolute left-7 bottom-0 text-xs">
-            
           </div>
         </form>
 
         <!-- links 1-->
-        <div class="flex flex-col items-center py-4 bg-white space-y-3 rounded-lg md:justify-between md:flex-row md:space-y-0 md:px-6 md:py-5">
+        <div class="links-wrap hidden flex-col items-center py-4 bg-white space-y-3 rounded-lg md:justify-between md:flex-row md:space-y-0 md:px-6 md:py-5">
           <p class="font-bold text-veryDarkBlue overflow-auto text-left px-6 w-full pb-4 border-b-2 border-slate-300 md:pb-0 md:border-0 md:p-0">
             https://frontendmentor.io
           </p>
@@ -133,37 +145,7 @@
         </div>
 
 
-        <!-- link 2-->
-        <div class="flex flex-col items-center py-4 bg-white space-y-3 rounded-lg md:justify-between md:flex-row md:space-y-0 md:px-6 md:py-5">
-          <p class="font-bold text-veryDarkBlue overflow-auto text-left px-6 w-full pb-4 border-b-2 border-slate-300 md:pb-0 md:border-0 md:p-0">
-            https://twitter.com/frontendmentor
-          </p>
-
-          <div class="flex flex-col items-center px-6 space-y-3 w-full md:flex-row md:space-y-0 md:space-x-4">
-            <p class="font-bold w-full text-cyan text-left md:px-0 md:text-right">
-              https://rel.ink/gxOXp9
-            </p>
-            <button class="bg-darkViolet text-white w-full px-5 py-3 rounded-lg font-bold hover:opacity-70 duration-200 transition-all md:w-auto">
-              Copied!
-            </button>
-          </div>
-        </div>
-
-        <!-- link 3-->
-        <div class="flex flex-col items-center overflow-auto py-4 bg-white space-y-3 rounded-lg md:justify-between md:flex-row md:space-y-0 md:px-6 md:py-5">
-          <p class="font-bold text-veryDarkBlue text-left px-6 w-full pb-4 border-b-2 border-slate-300 md:pb-0 md:border-0 md:p-0">
-            https://www.linkedin.com
-          </p>
-
-          <div class="flex flex-col items-center px-6 space-y-3 w-full md:flex-row md:space-y-0 md:space-x-4">
-            <p class="font-bold w-full text-cyan text-left md:px-0 md:text-right">
-              https://rel.ink/gob3X9
-            </p>
-            <button class="bg-cyan text-white w-full px-5 py-3 rounded-lg font-bold hover:opacity-70 duration-200 transition-all md:w-auto">
-              Copy
-            </button>
-          </div>
-        </div>
+        
       </div>
     </section>
 
@@ -264,22 +246,81 @@
 
         <!-- button -->
         <button
-          class="bg-cyan hover:opacity-70 duration-200 transition-all px-6 py-3 rounded-full text-sm text-white w-1/2 md:w-1/3 font-bold">
+          class="bg-cyan hover:opacity-70 duration-200 transition-all px-6 py-3 rounded-full text-sm text-white w-1/2 md:w-1/4 font-bold">
           Get Started
         </button>
       </div>
     </section>
 
-      Get Started
-    Features Link Shortening Branded Links Analytics Resources Blog Developers
-    Support Company About Our Team Careers Contact
+    <!-- footer -->
+    <footer id="footer" class="bg-veryDarkViolet">
+      <div class="max-w-6xl mx-auto flex flex-col justify-between py-10 px-6 space-y-6 md:space-y-0 md:flex-row">
+        <div class="mb-10 md:mb-0 flex flex-row mx-auto items-center md:items-start md:mx-0">
+          <img src="/images/logo.svg" alt="" class="footer-img">
+        </div>
+        <div class="flex flex-col items-center text-center justify-between space-y-12 md:space-y-0 md:flex-row md:space-x-20 md:text-left md:items-start">
 
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
-    </div>
+          <!-- features -->
+          <div class="flex flex-col space-y-3">
+            <p class="text-white">Features</p>
+            <h6 class="text-grayish text-sm hover:text-cyan hover:cursor-pointer">Link Shortening</h6>
+            <h6 class="text-grayish text-sm hover:text-cyan hover:cursor-pointer">Branded Links</h6>
+            <h6 class="text-grayish text-sm hover:text-cyan hover:cursor-pointer">Analytics</h6>
+          </div>
+
+          <!-- resources -->
+          <div class="flex flex-col space-y-3">
+            <p class="text-white">Resources</p>
+            <h6 class="text-grayish text-sm hover:text-cyan hover:cursor-pointer">Blog</h6>
+            <h6 class="text-grayish text-sm hover:text-cyan hover:cursor-pointer">Developers</h6>
+            <h6 class="text-grayish text-sm hover:text-cyan hover:cursor-pointer">Support</h6>
+          </div>
+
+
+          <!-- companies -->
+          <div class="flex flex-col space-y-3">
+            <p class="text-white">Company</p>
+            <h6 class="text-grayish text-sm hover:text-cyan hover:cursor-pointer">About</h6>
+            <h6 class="text-grayish text-sm hover:text-cyan hover:cursor-pointer">Our Team</h6>
+            <h6 class="text-grayish text-sm hover:text-cyan hover:cursor-pointer">Careers</h6>
+            <h6 class="text-grayish text-sm hover:text-cyan hover:cursor-pointer">Contact</h6>
+          </div>
+
+          <!-- icons -->
+          <div class="flex flex-row justify-center space-x-6">
+            <h6 class="text-white text-2xl transition-all duration-200 hover:text-cyan hover:cursor-pointer">
+              <i class="fa-brands fa-facebook"></i>
+            </h6>
+
+            <h6 class="text-white text-2xl transition-all duration-200 hover:text-cyan hover:cursor-pointer">
+              <i class="fa-brands fa-twitter"></i>
+            </h6>
+
+            <h6 class="text-white text-2xl transition-all duration-200 hover:text-cyan hover:cursor-pointer">
+              <i class="fa-brands fa-pinterest"></i>
+            </h6>
+
+            <h6 class="text-white text-2xl transition-all duration-200 hover:text-cyan hover:cursor-pointer">
+              <i class="fa-brands fa-instagram"></i>
+            </h6>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-grayish flex flex-col md:flex-row justify-center items-center space-y-2 max-w-6xl mx-auto md:space-y-0">
+        <p>Challenge by</p>
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" class="ml-2 transition-all duration-200 hover:text-cyan hover:cursor-pointer">Frontend Mentor.</a> 
+        <p>Coded by</p> 
+        <a href="https://twitter.com/ekiye_s" class="ml-2 transition-all duration-200 hover:text-cyan hover:cursor-pointer"> 
+          Henry Seigbein.
+        </a>
+      </div>
+    </footer>
+
+    
+    
+
+    
 
     <script src="/app.js"></script>
   </body>

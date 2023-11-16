@@ -32,6 +32,22 @@
   transform: translateY(14px);
 }
 
+.open {
+  transform: rotate(90deg);
+}
+
+.open .hamburger-top {
+  transform: rotate(45deg) translateY(6px) translateX(6px);
+}
+
+.open .hamburger-middle {
+  display: none;
+}
+
+.open .hamburger-bottom{
+  transform:rotate(-45deg) translateY(6px) translateX(-6px)
+}
+
 .error {
   color: green;
 }
@@ -54,6 +70,9 @@
   background-repeat: no-repeat;
   /* background-size: contain; */
 }
+.footer-img {
+  filter: brightness(0) invert(1);
+}
 
 @media screen and (max-width: 500px) {
   #link-form {
@@ -68,5 +87,7 @@
     background: url("../images/bg-boost-mobile.svg");
     background-color: hsl(257, 27%, 26%);
     background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
   }
 }
