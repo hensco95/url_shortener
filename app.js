@@ -6,6 +6,11 @@ let form_input = document.getElementById("input_id");
 let link_form = document.getElementById("link-form");
 let err_msg = document.getElementById("error-msg");
 
+let long = document.querySelector(".old-txt");
+let short = document.querySelector(".new-txt");
+
+const copy = document.getElementById("copy");
+
 const links_wrap = document.querySelector(".links-wrap");
 
 btn.addEventListener("click", navToggle);
@@ -57,6 +62,18 @@ function formSubmit(e) {
   }
 }
 
+async function copyText() {
+  let short_value = short.textContent;
+
+  try {
+    await navigator.clipboard.writeText(short_value);
+    console.log("copied");
+    copy.textContent = "Copied!";
+  } catch (err) {
+    console.log(err);
+  }
+}
+
 // shorten link function
 async function shortenURL() {
   const url = form_input.value;
@@ -76,9 +93,12 @@ async function shortenURL() {
     if (response.ok) {
       const data = await response.json();
       console.log(data);
+      long.textContent = url;
+      short.textContent = data.result_url;
+      copy.addEventListener("click", copyText);
+
       links_wrap.classList.add("flex");
       links_wrap.classList.remove("hidden");
-      
     } else {
       console.log("something went wrong");
     }
