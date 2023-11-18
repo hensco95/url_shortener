@@ -78,16 +78,18 @@ async function copyText() {
 async function shortenURL() {
   const url = form_input.value;
 
-  const proxyUrl = "https://cors-anywhere.herokuapp.com/";
-  const apiURl = `${proxyUrl}https://cleanuri.com/api/v1/shorten`;
+  const apiURl = "https://cleanuri.com/api/v1/shorten";
+
 
   try {
-    const response = await fetch(apiURl, {
+    const response = await fetch("https://cleanuri.com/api/v1/shorten", {
       method: "POST",
       headers: {
-        "Content-Type": "application/x-www-form-urlencoded",
+        "Content-Type": "application/json",
       },
-      body: `url=${encodeURIComponent(url)}`,
+      body: JSON.stringify({
+        url
+      }),
     });
 
     if (response.ok) {
