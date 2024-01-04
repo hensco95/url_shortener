@@ -592,16 +592,12 @@ video {
   left: 4rem;
 }
 
-.left-7 {
-  left: 1.75rem;
-}
-
-.top-24 {
-  top: 6rem;
-}
-
 .left-6 {
   left: 1.5rem;
+}
+
+.left-7 {
+  left: 1.75rem;
 }
 
 .right-6 {
@@ -612,12 +608,8 @@ video {
   top: 5rem;
 }
 
-.left-0 {
-  left: 0px;
-}
-
-.top-0 {
-  top: 0px;
+.top-24 {
+  top: 6rem;
 }
 
 .z-10 {
@@ -1283,6 +1275,10 @@ video {
 
   .md\:items-start {
     align-items: flex-start;
+  }
+
+  .md\:items-center {
+    align-items: center;
   }
 
   .md\:justify-between {

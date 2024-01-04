@@ -15,6 +15,8 @@ const links_wrap = document.querySelector(".links-wrap");
 
 btn.addEventListener("click", navToggle);
 
+copy.addEventListener("click", copyText);
+
 link_form.addEventListener("submit", formSubmit);
 link_form.addEventListener("submit", shortenURL);
 
@@ -69,42 +71,45 @@ async function copyText() {
     await navigator.clipboard.writeText(short_value);
     console.log("copied");
     copy.textContent = "Copied!";
+    setTimeout(() => {
+      copy.textContent = "Copy";
+    }, 1000);
   } catch (err) {
     console.log(err);
   }
 }
 
 // shorten link function
-async function shortenURL() {
+function shortenURL() {
+  let old_txt = document.querySelector(".old-txt");
+  const new_text = document.querySelector(".new-txt");
+  const links_wrap = document.querySelector(".links-wrap");
   const url = form_input.value;
 
-  const apiURl = "https://cleanuri.com/api/v1/shorten";
-
-
-  try {
-    const response = await fetch("https://cleanuri.com/api/v1/shorten", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        url
-      }),
-    });
-
-    if (response.ok) {
-      const data = await response.json();
+  fetch("https://api-ssl.bitly.com/v4/shorten", {
+    method: "POST",
+    headers: {
+      Authorization: "Bearer " + "804bca43d3eb88bc39e37c9788cca71e8830f2b6",
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      long_url: url,
+      domain: "bit.ly",
+      group_guid: "Bnbg2mhQBjt",
+    }),
+  })
+    .then((res) => {
+      return res.json();
+    })
+    .then((data) => {
       console.log(data);
-      long.textContent = url;
-      short.textContent = data.result_url;
-      copy.addEventListener("click", copyText);
 
-      links_wrap.classList.add("flex");
+      old_txt.textContent = data.long_url;
+      new_text.textContent = data.link;
       links_wrap.classList.remove("hidden");
-    } else {
-      console.log("something went wrong");
-    }
-  } catch (error) {
-    console.log(error);
-  }
+      links_wrap.classList.add("flex");
+    })
+    .catch((err) => {
+      console.log(err);
+    });
 }
